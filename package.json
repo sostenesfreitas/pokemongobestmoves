@@ -1,0 +1,30 @@
+{
+  "name": "pokemongobestmoves",
+  "version": "1.0.0",
+  "description": "best moves",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sostenesfreitas/pokemongobestmoves.git"
+  },
+  "keywords": [
+    "pokemongo",
+    "node",
+    "angular",
+    "html"
+  ],
+  "author": "sostenesfreitas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sostenesfreitas/pokemongobestmoves/issues"
+  },
+  "homepage": "https://github.com/sostenesfreitas/pokemongobestmoves#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.5.8",
+    "restangular": "^1.5.2"
+  }
+}

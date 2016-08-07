@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="ap.js"></script>
+	<title>Best Moves</title>
+</head>
+<body ng-controller="TodoListController">
+	<tr>
+		<th>name</th>
+		<th>attack</th>
+    	<th>defense  </th>
+    	<th>rankOff </th>
+    	<th>rankDef </th>
+    	<th>hp</th>
+  		<th>porcentOff </th>
+    	<th>porcentDef </th>
+    	<th>basicAtk </th>
+    	<th>damage </th>
+    	<th>chargeAtk  </th>
+    	<th>chargeDamage </th> 
+    	<th>gynDamage </th>
+    	<th>minCp </th>
+    	<th>maxCp </th>
+    	<th>tank </th>
+    	<th>gynOff </th>
+    	<th>gynDef</th>
+    	<th>numberDex </th>
+    	<th>types </th>
+	</tr>
+	<div style=padding:10px;margin:5px ng-repeat="poke in pokes">
+		<tr>
+		<th>{{poke.name}}</th>
+		<th>{{poke.attack}} </th>
+    	<th>{{poke.defense}}  </th>
+    	<th>{{poke.rankOff}} </th>
+    	<th>{{poke.rankDef}} </th>
+    	<th>{{poke.hp}} </th>
+  		<th>{{poke. porcentOff}} </th>
+    	<th>{{poke.porcentDef}} </th>
+    	<th>{{poke.basicAtk}} </th>
+    	<th>{{poke.damage}} </th>
+    	<th>{{poke.chargeAtk}}  </th>
+    	<th>{{poke.chargeDamage}} </th> 
+    	<th>{{poke.gynDamage}} </th>
+    	<th>{{poke.minCp}} </th>
+    	<th>{{poke.maxCp}} </th>
+    	<th>{{poke.tank}} </th>
+    	<th>{{poke.gynOff}} </th>
+    	<th>{{poke.gynDef}} </th>
+    	<th>{{poke.numberDex}} </th>
+    	<th>{{poke.types}} </th>
+		</tr>
+	</div>
+<body>
+</html>
