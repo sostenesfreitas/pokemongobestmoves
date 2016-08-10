@@ -8,29 +8,24 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet"
-		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
-		<link href="https://fonts.googleapis.com/css?family=Candal" rel="stylesheet">
-	<meta name="description" content="Site de ecommerce responsivo" />
-	<meta name="keywords" content="Ecommerce,responsivo" />
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Candal" rel="stylesheet">
+	<meta name="description" content="Best moves pokemon go" />
+	<meta name="keywords" content="Best, Moves, pokemongo,bestmoves,best moves pokemon go" />
 	<meta name="robots" content="index, follow" />
 	<meta name="author" content="sostenes freitas" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans'
-		rel='stylesheet' type='text/css' />
+	rel='stylesheet' type='text/css' />
 	<link rel="icon" href="img/Logo.png" />
 	<title>Best Moves</title>
 </head>
 
 <body ng-controller="TodoListController">
 	<header class="cabecalho container"> <a href="index.html">
-		<h2 class="logo">Ecommerce</h2>
+		<h2 class="logo">BestMoves</h2>
 	</a>
-	<button class="btn-buscar" ng-click="buscar(name)">Buscar </button>
-	<input class="buscar" type="text" placeholder="Buscar" ng-model="name">
-	
-	<button class="btn-menu">
-		<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
-	</button>
+	<select class="buscar" ng-options="item as item.field for item in items " ng-model="selected" ng-change="hasChanged()"></select>
 	<nav class="menu"> <a class="btn-close"><i
 		class="fa fa-times"></i></a>
 	<ul>
@@ -42,7 +37,7 @@
 
    <!-------------MAIN---------------->
    
-    <main class="servicos" ng-repeat="poke in pokes | limitTo:4">
+    <main class="servicos" ng-repeat="poke in pokes">
        <article class="servico">
         <a href="#"><img ng-src="img/{{poke.name}}.gif-c200" alt="pokemon"></a>
 		<div class="inner">
@@ -57,6 +52,7 @@
         </div>
        </article>
     </main>
+	
 	    <!-------------RODAPÉ----------------> 
     <footer class="rodape container">
         <div class="social-icons"> 
@@ -71,14 +67,6 @@
         </p>
     </footer>
 
- <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script>
-    $(".btn-menu").click(function(){
-        $(".menu").show();
-    });
-    $(".btn-close").click(function(){
-        $(".menu").hide();
-    });
-    </script>
+   
 <body>
 </html>
