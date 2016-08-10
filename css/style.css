@@ -1,0 +1,58 @@
+/*==================RESET=========================*/
+* {margin: 0; /*padding: 0;*/ border: none; box-sizing: border-box; font-family: 'Open Sans', sans-serif; font-size: 100%; outline: none; }
+body {background-color: #f5f5f5;}
+ul {list-style: none;}
+a {text-decoration: none;}
+img {max-width: 100%;}
+/*===================CONTAINER========================*/
+.container {width: 100%; float: left; padding: 3% 4%; text-align: center;}
+.container1 {width: 100%; float: left; padding: 3% 4%;}
+.cabecalho  {border-bottom: 1px solid #dedede;box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);padding: 20px 0;}
+.btn-produto {float: right;background-color: #4CAF50;border-radius: 5px 5px 5px 5px;;border: 0.5px solid #4CAF50;color: #fff;text-align: center;cursor: pointer;    padding: 0% 25% 0% 29%;width: 100%;margin-top: -10%;}
+/*===================HEADER===========================*/
+.logo {margin-left: 7%; width: 100px; height: 60px; float: right; background: url(../img/pokeball-460x320.png) center center/100px no-repeat; font-size: 0; }
+.btn-menu { width: 56px; height: 56px; float: right; color: #fff; text-align: center; border-radius: 56px; cursor: pointer; background: linear-gradient(to right, #ce2e3c,#4B0082);}
+.menu {z-index: 1;display: none; width: 100%; height: 100%; position: fixed; background-color: rgba(0,0,0,0.76); top: 0; left: 0;}
+.btn-close { font-size: 1.5em; color: #fff; float: right; cursor: pointer; margin: 2% 3% 0 0;}
+.menu ul { margin: 0px -10%;width: 100%; float: left; text-align: left;}
+.menu li {padding:1.5%}
+.menu li a { font-size: 2em; color: #fff; padding: 1.5% 3%; cursor:pointer;}
+.menu li a:hover{ border: 1px solid #da6709;}
+.buscar {float: right; width: 20%; height: 40px;border-radius: 5px; margin-top: 1%; padding-left: 1%}
+.btn-buscar span:after {content: '✓';position: absolute;opacity: 0;top: 0;right: -50px;transition: 0.5s;}
+.btn-buscar {width:5%; height:40px; float:right;  margin-top: 1%;background-color: #4CAF50;  border-radius: 0 5px 5px 0;}
+ button span {cursor: pointer;display: inline-block;position: relative;transition: 0.5s;}
+ button { display:inline-block; color:#fff; cursor:pointer; transition: all 5.5s;}
+ button:hover span {padding-right: 30px;}
+ button:hover span:after {opacity: 10;right: 0;}
+/*===================BANNER============================*/
+.banner { background: url(../img/poke.jpg) no-repeat fixed;}
+.title { width: 100%;}
+.title h2 { font-size: 2em; color: #fff;}
+.title h3 { font-size: 1.5em; color: #fff;}
+.buttons { width: 100%; margin-top: 2%;}
+.buttons i { float: right;}
+.btn { width: 100%; font-size: 1.5em; text-align: left; cursor: pointer; padding: 5%; border-radius: 10px; }
+/*==================POKEMON==========================*/
+.servicos { width: 50%; float: left; padding: 2.2% 4%;}
+.servico { width: 100%; background-color: #fff; text-align: left; border-radius: 7px; margin-bottom: 3%;margin-top:2%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.servico img {float: left;}
+.inner {padding: 1%;}
+.inner a { font-size: 1.5em; color: #565656;font-family: 'Candal', sans-serif;}
+.inner p {font-size: 1.2em; color: #565656; line-height: 1.5em;font-family: 'Candal', sans-serif;}
+/*==================RODAPE=============================*/
+
+.rodape { width: 100%; float: left; padding: 3% 4%; text-align: center; background: linear-gradient(to right, #fff,#453b3c);}
+.social-icons a { font-size: 1.5em; color: rgba(255,255,255,0.7); margin-right: 3%;}
+.social-icons a:last-child{margin-right: 0;}
+.social-icons a:hover {color: rgb(255,255,255);}
+.copyright { margin-top: 2%; color: rgba(255,255,255,0.7);}
+
+/*==============WIDE SCREEN====1280PX==================*/
+@media screen and (min-width:1280px) {
+    .btn-menu {display: none;}
+    .btn-close {display: none;}
+    .menu {width: auto;height: 56px;line-height: 56px;float: left;background-color: #f5f5f5;display: block !important;position: static;padding-left: 1%}
+    .menu li {padding: 0;float: left;}
+    .menu li a {color: #130400;font-size: 1em;padding: 15px;}
+    .menu li a:hover {border: none;color: #da6709;}

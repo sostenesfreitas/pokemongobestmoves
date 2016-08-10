@@ -19,8 +19,8 @@ const _schema = {
     minCp: {type: Number},
     maxCp: {type: Number},
     tank: {type: Number},
-    gynOff: {type: Number},
-    gynDef: {type: Number},
+    gymOff: {type: Number},
+    gymDef: {type: Number},
     numberDex: {type: Number},
     types: []
 };

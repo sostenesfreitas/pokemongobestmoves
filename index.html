@@ -4,54 +4,81 @@
 	<meta charset="UTF-8">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	<script src="ap.js"></script>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
+		<link href="https://fonts.googleapis.com/css?family=Candal" rel="stylesheet">
+	<meta name="description" content="Site de ecommerce responsivo" />
+	<meta name="keywords" content="Ecommerce,responsivo" />
+	<meta name="robots" content="index, follow" />
+	<meta name="author" content="sostenes freitas" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans'
+		rel='stylesheet' type='text/css' />
+	<link rel="icon" href="img/Logo.png" />
 	<title>Best Moves</title>
 </head>
+
 <body ng-controller="TodoListController">
-	<tr>
-		<th>name</th>
-		<th>attack</th>
-    	<th>defense  </th>
-    	<th>rankOff </th>
-    	<th>rankDef </th>
-    	<th>hp</th>
-  		<th>porcentOff </th>
-    	<th>porcentDef </th>
-    	<th>basicAtk </th>
-    	<th>damage </th>
-    	<th>chargeAtk  </th>
-    	<th>chargeDamage </th> 
-    	<th>gynDamage </th>
-    	<th>minCp </th>
-    	<th>maxCp </th>
-    	<th>tank </th>
-    	<th>gynOff </th>
-    	<th>gynDef</th>
-    	<th>numberDex </th>
-    	<th>types </th>
-	</tr>
-	<div style=padding:10px;margin:5px ng-repeat="poke in pokes">
-		<tr>
-		<th>{{poke.name}}</th>
-		<th>{{poke.attack}} </th>
-    	<th>{{poke.defense}}  </th>
-    	<th>{{poke.rankOff}} </th>
-    	<th>{{poke.rankDef}} </th>
-    	<th>{{poke.hp}} </th>
-  		<th>{{poke. porcentOff}} </th>
-    	<th>{{poke.porcentDef}} </th>
-    	<th>{{poke.basicAtk}} </th>
-    	<th>{{poke.damage}} </th>
-    	<th>{{poke.chargeAtk}}  </th>
-    	<th>{{poke.chargeDamage}} </th> 
-    	<th>{{poke.gynDamage}} </th>
-    	<th>{{poke.minCp}} </th>
-    	<th>{{poke.maxCp}} </th>
-    	<th>{{poke.tank}} </th>
-    	<th>{{poke.gynOff}} </th>
-    	<th>{{poke.gynDef}} </th>
-    	<th>{{poke.numberDex}} </th>
-    	<th>{{poke.types}} </th>
-		</tr>
-	</div>
+	<header class="cabecalho container"> <a href="index.html">
+		<h2 class="logo">Ecommerce</h2>
+	</a>
+	<button class="btn-buscar" ng-click="buscar(name)">Buscar </button>
+	<input class="buscar" type="text" placeholder="Buscar" ng-model="name">
+	
+	<button class="btn-menu">
+		<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+	</button>
+	<nav class="menu"> <a class="btn-close"><i
+		class="fa fa-times"></i></a>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="https://github.com/sostenesfreitas">Quem Somos</a></li>
+		<li><a href="https://telegram.me/canalDoMiojo">Contato</a></li>
+	</ul>
+	</nav> </header>
+
+   <!-------------MAIN---------------->
+   
+    <main class="servicos" ng-repeat="poke in pokes | limitTo:4">
+       <article class="servico">
+        <a href="#"><img ng-src="img/{{poke.name}}.gif-c200" alt="pokemon"></a>
+		<div class="inner">
+            <a href="#"> Name: {{poke.name}}</a>
+            <p>CpMax:{{poke.maxCp}} CpMin:{{poke.minCp}}</p>
+            <p>Attack: {{poke.attack}} Defense:{{poke.defense}} Hp: {{poke.hp}}</p>
+		<p>RankOffensive:{{poke.rankOff}} rankDefensive:{{poke.rankDef}}</p>
+		<p style=color:#453b3c>BasicAtk: {{poke.basicAtk}} </p><p>Damage(100s): {{poke.damage}}</p>
+		<p style=color:#453b3c>ChargeAtk: {{poke.chargeAtk}}</p> <p style=padding-left:35%>Damage(100s): {{poke.chargeDamage}}</p>
+	    <p style=padding-top:1%>GynDamage: {{poke.gynDamage}} GymOffensive: {{poke.gymOff}} </p><p>GymDefensive: {{poke.gymDef}}
+		Tank: {{poke.tank}}</p>
+        </div>
+       </article>
+    </main>
+	    <!-------------RODAPÉ----------------> 
+    <footer class="rodape container">
+        <div class="social-icons"> 
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+        </div>
+        <p class="copyright">
+            Copyright @ Miojo 2016. Nois que voa.
+        </p>
+    </footer>
+
+ <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+    $(".btn-menu").click(function(){
+        $(".menu").show();
+    });
+    $(".btn-close").click(function(){
+        $(".menu").hide();
+    });
+    </script>
 <body>
 </html>
